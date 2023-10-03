@@ -9,8 +9,17 @@ const App = () => {
   return (
     <div>
       {data?.rockets?.map((rocket) => (
-        <div key={rocket?.description}>
+        <div
+          style={{
+            border: "1px solid gray",
+            borderRadius: "5px",
+            marginBottom: "10px",
+            padding: "8px",
+          }}
+          key={rocket?.description}
+        >
           <p>{rocket?.description}</p>
+          <p>{rocket?.country}</p>
         </div>
       ))}
     </div>
