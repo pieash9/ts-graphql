@@ -1,7 +1,7 @@
-import { gql } from "@apollo/client";
+import { gql } from "../__generated__";
 
-export const GET_ROCKETS = gql`
-  query rocketQuery {
+export const GET_ROCKETS = gql(`
+  query GetRockets {
     rockets {
       company
       country
@@ -12,4 +12,4 @@ export const GET_ROCKETS = gql`
       }
     }
   }
-`;
+`);

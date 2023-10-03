@@ -6,7 +6,15 @@ const App = () => {
   if (error) return <p>Error</p>;
   if (loading) return <p>loading...</p>;
   console.log(data);
-  return <div></div>;
+  return (
+    <div>
+      {data?.rockets?.map((rocket) => (
+        <div key={rocket?.description}>
+          <p>{rocket?.description}</p>
+        </div>
+      ))}
+    </div>
+  );
 };
 
 export default App;
